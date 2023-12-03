@@ -6,54 +6,127 @@ footer {
 }
 
 body {
-    background-color: #2F4F4F;
+    background-color: #1E1E1E;
     line-height: 1;
     margin: 0;
 }
 
-/*Nav Bar*/
+.container{
+    width: 100%;
+    margin: auto;
+    padding-top: 4%;
+    padding-bottom: 4%;
+}
+
+/*################################ Nav Bar*/
 nav {
     width: 100%;
     margin: 0;
 }
 
-nav ul {
+nav ul.topnav {
     background-color: #36454F;
-    overflow:hidden;
-    margin: 0%;
-    padding: 0%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Flex container */
+    justify-content: space-between; /* Space between items */
+    list-style: none;
 }
 
+/* Left-aligned item */
+nav ul.topnav > li:first-child {
+    margin-right: auto; /* Push everything else to the right */
+}
+
+.nav-center-group {
+    display: flex;
+    justify-content: center; /* Center items */
+    flex-grow: 1; /* Allow to grow to use available space */
+    /* No need to specify padding for li here as it's handled by the a tags */
+}
+
+/* Style a tags directly within .nav-center-group */
+.nav-center-group a {
+    padding: 0; /* Adjust space between the center items */
+}
+
+/* Right-aligned item */
+nav ul.topnav > li:last-child {
+    margin-left: auto; /* Push to the right */
+}
+
+/* List items */
 nav ul.topnav li {
     list-style: none;
-    float: left;
 }
 
-ul.topnav li.topnav-right {
-    float: right;
-}
-
-ul.topnav li a{
+/* Links */
+nav ul.topnav li a {
     display: block;
     text-decoration: none;
     min-height: 16px;
     text-align: center;
     padding: 14px;
-    text-transform: uppercase;
+    text-transform: capitalize;
     color: #FFFDD0;
+}
 
-}
-ul.topnav li a:hover{
+nav ul.topnav li a:hover {
     background-color: #4682B4;
-    /* color: #FFFDD0; */
 }
-ul.topnav li.dropdownIcon{
+
+/* Dropdown icon */
+ul.topnav li.dropdownIcon {
     display: none;
 }
 
-/* Mobile Design*/
+/*##################### Style #################*/
+#sect-1{
+    background-image: linear-gradient(70deg, rgba(255,0,0,0), rgb(3, 68, 117));
+}
+
+/*################################ Mobile Design */
 @media screen and (max-width: 680px) {
-    ul.topnav li:not(:nth-child(1)){
+    /* Set the flex direction of the top navigation to column to stack items vertically */
+    nav ul.topnav {
+        flex-direction: column;
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    /* Initially hide all list items except the first and the dropdown icon */
+    nav ul.topnav > li:not(:first-child):not(.dropdownIcon) {
         display: none;
+    }
+
+    /* Ensure the dropdown icon is displayed and positioned correctly */
+    nav ul.topnav > li.dropdownIcon {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+   
+    /* Correct positioning of the dropdown icon in the responsive menu */
+   nav ul.topnav.responsive > li.dropdownIcon {
+        position: absolute; /* Reset position */
+        top: 0;
+        right: 0;
+    }
+
+    /* When the 'responsive' class is added to the topnav (when dropdown is clicked) */
+    nav ul.topnav.responsive {
+        position: relative;
+    }
+
+    nav ul.topnav.responsive > li:not(:first-child) {
+        display: inline; /* Show the list items */
+        float: none; /* Full width */
+    }
+
+    /* Style the links within the dropdown menu */
+    nav ul.topnav.responsive > li:not(:first-child) a {
+        display: block; /* Align text to the left */
+        text-align: left;
     }
 }

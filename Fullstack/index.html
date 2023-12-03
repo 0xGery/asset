@@ -1,17 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>0xGery's Portfolio</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-    <nav>
-        <ul class="topnav">
-            <li><a href="#home">Dashboard</a></li>
-            <li class="topnav-right"><a href="#Connect">Connect</a></li>
-            <li class="dropdownIcon"><a href="">&#9776;</a></li>
-        </ul>
-    </nav>
-    </body>
-</html> 
+<head>
+    <meta charset="UTF-8">
+    <title>Node Runners</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav>
+    <ul class="topnav" id="Dropdown">
+        <li><a href="#home">0xGery</a></li>
+        
+        <!-- Use an li to wrap the centered group -->
+        <li class="nav-center-group">
+            <a href="#Project">Project</a>
+            <a href="#Service">Service</a>
+            <a href="#Education">Education</a>
+            <a href="#AboutMe">About Me</a>
+            <a href="#Contact">Contact</a>
+        </li>
+        
+        <li class="topnav-right"><a href="#Connect">Connect</a></li>
+        <li class="dropdownIcon"><a href="javascript:void(0);" onclick="DropdownMenu()">&#9776;</a></li>
+    </ul>
+</nav>
+
+<div class="container" id="sect-1">
+
+</div>
+
+
+<script>
+    function DropdownMenu() {
+        var x = document.getElementById("Dropdown");
+        if (x.className === "topnav"){
+            x.className += " responsive";
+        }
+        else {
+            x.className = "topnav";
+        }
+    }
+</script>
+</body>
+</html>
