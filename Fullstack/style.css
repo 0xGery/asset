@@ -109,7 +109,7 @@ ul.topnav li.dropdownIcon {
 
 /*##################### Style #################*/
 #sect-1{
-    background-image: linear-gradient(70deg, rgba(255,0,0,0), rgb(3, 68, 117));
+    background: linear-gradient(45deg, #1c2052, #410e6b, #502570);
 }
 
 .leftSide-col{
@@ -117,19 +117,34 @@ ul.topnav li.dropdownIcon {
 }
 
 .rightSide-col{
-    margin-left:20%;
+    margin-left:15%;
+}
+
+.imageA{
+    max-width: 110%;
+    margin-left: -20%;
 }
 
 h1.large {
     color: #FFF;
-    font-size: 56px;
+    font-weight: lighter;
+    font-size: 80px;
     margin: 0;
     line-height: 70px;
 }
-h2.small {
-    color:yellow;
-    font-size: 20px;
+h1.large2 {
+    color: #FFF;
+    font-weight: lighter;
+    font-size: 80px;
     margin: 0;
+    margin-left: 30%;
+    line-height: 70px;
+}
+h2.small {
+    color:#502570;
+    font-weight: 100;
+    font-size: 20px;
+    margin-left: 70%;
 }
 
 /*################################ Mobile Design */
@@ -142,6 +157,9 @@ h2.small {
 
     /* Initially hide all list items except the first and the dropdown icon */
     nav ul.topnav > li:not(:first-child):not(.dropdownIcon) {
+        display: none;
+    }
+    .imageA{
         display: none;
     }
 
