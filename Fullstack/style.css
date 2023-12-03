@@ -11,6 +11,11 @@ body {
     margin: 0;
 }
 
+label {
+    font-size: 35px;
+    font-weight: 600;
+}
+
 .container{
     width: 100%;
     margin: auto;
@@ -112,15 +117,15 @@ ul.topnav li.dropdownIcon {
     background: linear-gradient(45deg, #1c2052, #410e6b, #502570);
 }
 
-.leftSide-col{
+div.leftSide-col{
     margin-left:3%
 }
 
-.rightSide-col{
+div.rightSide-col{
     margin-left:15%;
 }
 
-.imageA{
+div.imageA{
     max-width: 110%;
     margin-left: -20%;
 }
@@ -140,6 +145,19 @@ h1.large2 {
     margin-left: 30%;
     line-height: 70px;
 }
+
+h1.Project {
+    font-size: 60px;
+}
+
+div.box {
+    background-color: #fff;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, .15), 0 2px 3px 0 rgba(0, 0, 0, .1);
+}
+div.icon {
+    max-height: 100%;
+}
+
 h2.small {
     color:#502570;
     font-weight: 100;
